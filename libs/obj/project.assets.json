@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net7.0": {
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -50,34 +50,34 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net7.0": [
       "Newtonsoft.Json >= 13.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\A200002851\\.nuget\\packages\\": {}
+    "C:\\Users\\leona\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\libs.csproj",
+      "projectUniqueName": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\libs.csproj",
       "projectName": "libs",
-      "projectPath": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\libs.csproj",
-      "packagesPath": "C:\\Users\\A200002851\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\A200002851\\OneDrive - Deutsche Telekom AG\\Projects\\lesson07\\libs\\obj\\",
+      "projectPath": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\libs.csproj",
+      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\A200002851\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net7.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {}
         }
       },
@@ -85,16 +85,11 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
@@ -117,7 +112,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

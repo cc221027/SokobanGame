@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\libs.csproj": {}
+    "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\libs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\libs.csproj": {
+    "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\libs.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\libs.csproj",
         "projectName": "libs",
-        "projectPath": "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\libs.csproj",
-        "packagesPath": "C:\\Users\\Marco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\obj\\",
+        "projectPath": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\libs.csproj",
+        "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

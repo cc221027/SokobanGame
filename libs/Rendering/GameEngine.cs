@@ -41,7 +41,10 @@ public sealed class GameEngine
         return _focusedObject;
     }
 
+    private bool characterCreated = false;
+
     public void Setup(){
+
 
         //Added for proper display of game characters
         Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -53,7 +56,10 @@ public sealed class GameEngine
 
         foreach (var gameObject in gameData.gameObjects)
         {
-            AddGameObject(CreateGameObject(gameObject));
+            if(!characterCreated || gameObject.Type != 0){
+                AddGameObject(CreateGameObject(gameObject));
+                if(gameObject.Type == 0){characterCreated = true;}
+            }
         }
         
         _focusedObject = gameObjects.OfType<Player>().First();

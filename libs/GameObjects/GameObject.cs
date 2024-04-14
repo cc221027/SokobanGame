@@ -1,6 +1,6 @@
 ﻿namespace libs;
 
-public class GameObject : IGameObject, IMovement
+public class GameObject : IGameObject, IMovement, ICloneable
 {
     private char _charRepresentation = '#';
     private ConsoleColor _color;
@@ -67,5 +67,9 @@ public class GameObject : IGameObject, IMovement
         _prevPosY = _posY;
         _posX += dx;
         _posY += dy;
+    }
+
+    public object Clone() {
+        return this.MemberwiseClone();
     }
 }

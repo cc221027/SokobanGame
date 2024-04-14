@@ -55,19 +55,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leona\\.nuget\\packages\\": {}
+    "C:\\Users\\susan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\libs.csproj",
+      "projectUniqueName": "D:\\FH_stp\\SS24\\CD\\SokobanGame\\libs\\libs.csproj",
       "projectName": "libs",
-      "projectPath": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\libs.csproj",
-      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leona\\OneDrive\\Documents\\SokobanGame\\libs\\obj\\",
+      "projectPath": "D:\\FH_stp\\SS24\\CD\\SokobanGame\\libs\\libs.csproj",
+      "packagesPath": "C:\\Users\\susan\\.nuget\\packages\\",
+      "outputPath": "D:\\FH_stp\\SS24\\CD\\SokobanGame\\libs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\susan\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -112,7 +112,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

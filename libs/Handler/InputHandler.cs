@@ -25,6 +25,14 @@ public sealed class InputHandler{
         GameObject focusedObject = engine.GetFocusedObject();
 
         if (focusedObject != null) {
+
+            if(keyInfo.Key == ConsoleKey.Z && keyInfo.Modifiers.HasFlag(ConsoleModifiers.Control)) {
+                engine.RestoreMap();
+                return;
+            }
+
+            engine.StoreMap();
+
             // Handle keyboard input to move the player
             switch (keyInfo.Key)
             {
@@ -42,6 +50,13 @@ public sealed class InputHandler{
                     break;
                 default:
                     break;
+            }
+
+            var objOnMyPos = engine.GetMap().Get(focusedObject.PosY, focusedObject.PosX);
+            if (objOnMyPos is ICollidable) {
+                if (objOnMyPos is not Box) {
+                    engine.RestoreMap();
+                }
             }
         }
         

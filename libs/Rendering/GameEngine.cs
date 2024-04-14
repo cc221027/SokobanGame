@@ -32,6 +32,34 @@ public sealed class GameEngine
 
     private List<GameObject> gameObjects = new List<GameObject>();
 
+    // 1 object always shows to next object and the next object to the previous one
+    private LinkedList<List<GameObject>> gameObjectSnapshots = new LinkedList<List<GameObject>>();
+
+    public void StoreMap() {
+
+        // new list with gameobject clones
+        List<GameObject> gameObjectClones = new List<GameObject>();
+        // 1 list represents one snapshot of game
+
+        // create clone for each original ga,eobject of original list
+        foreach (GameObject gameObject in gameObjects) {
+            gameObjectClones.Add((GameObject) gameObject.Clone());
+        }
+
+        gameObjectSnapshots.AddLast(gameObjectClones);
+    }
+
+    public void RestoreMap() {
+
+        // at beginning of game wihtout any move made it cant restore
+        if (gameObjectSnapshots.Count <= 0) return;
+
+        gameObjects = gameObjectSnapshots.Last!.Value;
+        gameObjectSnapshots.RemoveLast();
+
+        // cloned player isnt the actual player, its just a clone -> promote clone to original player
+        _focusedObject = gameObjects.OfType<Player>().First();
+    }
 
     public Map GetMap() {
         return map;

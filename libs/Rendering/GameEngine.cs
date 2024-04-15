@@ -32,16 +32,17 @@ public sealed class GameEngine
 
     private List<GameObject> gameObjects = new List<GameObject>();
 
-    // 1 object always shows to next object and the next object to the previous one
+    // In a linked list: 1 object always shows to the next and the previous object
+    // -> insertion & deletion is easier -> no need to shift elements after insertion/deletion & easier locatable, even after
     private LinkedList<List<GameObject>> gameObjectSnapshots = new LinkedList<List<GameObject>>();
 
     public void StoreMap() {
 
         // new list with gameobject clones
-        List<GameObject> gameObjectClones = new List<GameObject>();
         // 1 list represents one snapshot of game
+        List<GameObject> gameObjectClones = new List<GameObject>();
 
-        // create clone for each original ga,eobject of original list
+        // create clone for each original gameobject of original list -> dont want to effect original object
         foreach (GameObject gameObject in gameObjects) {
             gameObjectClones.Add((GameObject) gameObject.Clone());
         }
@@ -51,13 +52,13 @@ public sealed class GameEngine
 
     public void RestoreMap() {
 
-        // at beginning of game wihtout any move made it cant restore
+        // at beginning of game wihtout any move made it obv cant restore
         if (gameObjectSnapshots.Count <= 0) return;
 
         gameObjects = gameObjectSnapshots.Last!.Value;
         gameObjectSnapshots.RemoveLast();
 
-        // cloned player isnt the actual player, its just a clone -> promote clone to original player
+        // cloned player isnt the actual player, its just a clone -> "promote" clone to original player
         _focusedObject = gameObjects.OfType<Player>().First();
     }
 

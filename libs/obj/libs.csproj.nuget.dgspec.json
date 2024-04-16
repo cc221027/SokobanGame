@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FH_stp\\SS24\\CD\\SokobanGame\\libs\\libs.csproj": {}
+    "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\libs.csproj": {}
   },
   "projects": {
-    "D:\\FH_stp\\SS24\\CD\\SokobanGame\\libs\\libs.csproj": {
+    "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FH_stp\\SS24\\CD\\SokobanGame\\libs\\libs.csproj",
+        "projectUniqueName": "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\libs.csproj",
         "projectName": "libs",
-        "projectPath": "D:\\FH_stp\\SS24\\CD\\SokobanGame\\libs\\libs.csproj",
-        "packagesPath": "C:\\Users\\susan\\.nuget\\packages\\",
-        "outputPath": "D:\\FH_stp\\SS24\\CD\\SokobanGame\\libs\\obj\\",
+        "projectPath": "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\libs.csproj",
+        "packagesPath": "C:\\Users\\Anwender\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\susan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anwender\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

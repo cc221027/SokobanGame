@@ -77,7 +77,7 @@ public sealed class InputHandler{
                 GameObject posBehindBox = engine.GetMap().Get(nextBoxPosY, nextBoxPosX);
 
                 // if obstacle behind box -> cant push
-                if (posBehindBox is Obstacle) {
+                if (posBehindBox is Obstacle or Box) {
                     engine.RestoreMap();
                 }
                 else {

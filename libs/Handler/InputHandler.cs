@@ -79,6 +79,16 @@ public sealed class InputHandler{
                 // if obstacle behind box -> cant push
                 if (posBehindBox is Obstacle or Box) {
                     engine.RestoreMap();
+                } 
+                else if (posBehindBox is Goal goal) {
+                    if (goal.Color == ConsoleColor.Yellow) {
+                        engine.RestoreMap();
+                    }
+                    else {
+                        box.Move(dx, dy);
+                        player.Move(dx, dy);
+                        goal.Color = ConsoleColor.Yellow;
+                    }
                 }
                 else {
                     box.Move(dx, dy);

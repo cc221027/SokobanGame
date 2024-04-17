@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\libs.csproj": {}
+    "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\libs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\libs.csproj": {
+    "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\libs.csproj",
+        "projectUniqueName": "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\libs.csproj",
         "projectName": "libs",
-        "projectPath": "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\libs.csproj",
-        "packagesPath": "C:\\Users\\Anwender\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anwender\\Documents\\GitHub\\SokobanGame\\libs\\obj\\",
+        "projectPath": "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\libs.csproj",
+        "packagesPath": "C:\\Users\\Marco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marco\\Desktop\\SokobanGame\\libs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Anwender\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -61,6 +61,16 @@ public sealed class GameEngine
         // cloned player isnt the actual player, its just a clone -> "promote" clone to original player
         _focusedObject = gameObjects.OfType<Player>().First();
     }
+    
+
+public void SaveMap() {
+    List<GameObject> lastSnapshot = gameObjectSnapshots.Last!.Value;
+
+    string snapshotJson = JsonSerializer.Serialize(lastSnapshot);
+    string filepath = "../savedGame.json";
+    File.WriteAllText(filepath, snapshotJson); 
+}
+
 
     public Map GetMap() {
         return map;

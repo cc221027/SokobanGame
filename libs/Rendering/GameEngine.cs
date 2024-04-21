@@ -61,15 +61,23 @@ public sealed class GameEngine
         // cloned player isnt the actual player, its just a clone -> "promote" clone to original player
         _focusedObject = gameObjects.OfType<Player>().First();
     }
-    
 
-public void SaveMap() {
-    List<GameObject> lastSnapshot = gameObjectSnapshots.Last!.Value;
 
-    string snapshotJson = JsonSerializer.Serialize(lastSnapshot);
-    string filepath = "../savedGame.json";
-    File.WriteAllText(filepath, snapshotJson); 
-}
+    public void SaveGame() {
+        List<GameObject> lastSnapshot = gameObjectSnapshots.Last!.Value;
+
+        // create object which can be 'changed' during runtime -> can add map width and height during game playing
+        dynamic gameData = new System.Dynamic.ExpandoObject();
+        gameData.gameObjects = lastSnapshot;
+        gameData.map = new {
+            width = map.MapWidth,
+            height = map.MapHeight
+        };
+
+        string snapshotJson = JsonConvert.SerializeObject(gameData);
+        string filepath = "../savedGame.json";
+        File.WriteAllText(filepath, snapshotJson); 
+    }
 
 
     public Map GetMap() {
@@ -82,7 +90,15 @@ public void SaveMap() {
 
     private bool characterCreated = false;
 
+
+
+
     public void Setup(){
+
+        gameObjects.Clear();
+        gameObjectSnapshots.Clear();
+        map = new Map();
+        characterCreated = false;
 
 
         //Added for proper display of game characters
@@ -102,8 +118,12 @@ public void SaveMap() {
         }
         
         _focusedObject = gameObjects.OfType<Player>().First();
+        StoreMap();
 
     }
+
+
+
 
     public void Render() {
         
@@ -156,5 +176,9 @@ public void SaveMap() {
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(' ');
         }
+    }
+
+    public bool WinCheck() {
+        return gameObjects.OfType<Goal>().All(goal => goal.Color == ConsoleColor.Yellow);
     }
 }

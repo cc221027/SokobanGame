@@ -30,8 +30,14 @@ public sealed class InputHandler{
                 engine.RestoreMap();
                 return;
             }
-
+            
             engine.StoreMap();
+
+            if(keyInfo.Key == ConsoleKey.S && keyInfo.Modifiers.HasFlag(ConsoleModifiers.Control)) {
+                engine.SaveGame();
+                return;
+            }
+
 
             // Handle keyboard input to move the player
             switch (keyInfo.Key)
@@ -52,12 +58,6 @@ public sealed class InputHandler{
                     break;
             }
 
-            // var objOnMyPos = engine.GetMap().Get(focusedObject.PosY, focusedObject.PosX);
-            // if (objOnMyPos is ICollidable) {
-            //     if (objOnMyPos is not Box) {
-            //         engine.RestoreMap();
-            //     }
-            // }
         }
 
         void CollisionSituation(GameObject player, int dx, int dy)

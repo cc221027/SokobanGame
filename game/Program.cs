@@ -9,16 +9,24 @@ class Program
         var engine = GameEngine.Instance;
         var inputHandler = InputHandler.Instance;
         
-        engine.Setup();
+        while (true) {
 
-        // Main game loop
-        while (true)
-        {
-            engine.Render();
+            engine.Setup();
 
-            // Handle keyboard input
-            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-            inputHandler.Handle(keyInfo);
+            // Main game loop
+            while (true)
+            {
+                engine.Render();
+
+                if(engine.WinCheck()) {
+                    FileHandler.ChangeLevel();
+                    break;
+                }
+
+                // Handle keyboard input
+                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                inputHandler.Handle(keyInfo);
+            }
         }
     }
 }

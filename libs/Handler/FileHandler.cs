@@ -9,7 +9,7 @@ public static class FileHandler
     private static string filePath;
     //private readonly static string envVar = "GAME_SETUP_PATH";
     private static string savePath = "../savedGame.json";
-    private static int levelNumber = 1;
+    private static int levelNumber = 3;
     private static string levelPath = "../Level" + levelNumber + ".json";
 
     static FileHandler()
@@ -31,11 +31,11 @@ public static class FileHandler
         }
     }
 
-    private static void ChangeLevel()
+    public static void ChangeLevel()
     {
         levelNumber++;
 
-        if (levelNumber > 3)
+        if (levelNumber >= 3)
         {
             levelNumber = 1;
             levelPath = "../Level" + levelNumber + ".json";
